@@ -8,7 +8,22 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://the-poets-corner-six.vercel.app',
+  'https://the-poets-corner-git-main-tishas-projects-4bb556cb.vercel.app',
+  'https://the-poets-corner-h0n4nbslr-tishas-projects-4bb556cb.vercel.app'
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 app.use(express.json());
 
 // Test route
