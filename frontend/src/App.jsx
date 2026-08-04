@@ -98,10 +98,11 @@ function App() {
        const controller = new AbortController();
        const timeoutId = setTimeout(() => controller.abort(), 10000);
 
-       const res = await fetch(
-         `http://localhost:5000/api/poems/recommend?mood=${encodeURIComponent(term)}`,
-         { signal: controller.signal }
-       );
+       const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+   const res = await fetch(
+     `${apiUrl}/api/poems/recommend?mood=${encodeURIComponent(term)}`,
+     { signal: controller.signal }
+   );
        clearTimeout(timeoutId);
 
        if (!res.ok) {
