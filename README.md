@@ -2,6 +2,10 @@
 
 A full-stack web application that recommends poems based on your mood, emotion, or occasion — built with React, Node.js/Express, and a dataset of over 13,000 poems from the Poetry Foundation.
 
+🔗 **[Live Demo](https://the-poets-corner-six.vercel.app)**
+
+![Homepage](assets/homepage-light.png)
+
 ## ✨ Features
 
 - 🔍 Search poems by mood, theme, or occasion (heartbreak, love, rain, hope, and more)
@@ -12,6 +16,14 @@ A full-stack web application that recommends poems based on your mood, emotion, 
 - 📱 Fully responsive design (mobile, tablet, desktop)
 - 📋 Copy poem to clipboard
 - ⚡ Loading skeletons and robust error handling
+
+## 📸 Screenshots
+
+| Search Results | Dark Mode |
+|---|---|
+| ![Search Results](assets/search-results.png) | ![Dark Mode](assets/homepage-dark.png) |
+
+
 
 ## 🛠️ Tech Stack
 
